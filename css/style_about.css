@@ -290,6 +290,16 @@ body{
     font-weight: 600;
 }
 
+
+
+
+
+/* me section lorem---------------------------------------------------------------------------------------------------*/
+
+
+
+
+
 .me{
     background-color: transparent;
     display: flex;
@@ -342,6 +352,43 @@ body{
     display: inline;
     font-weight: 400;
 }
+
+@media only screen and (max-width:900px){
+    .me{
+        background-color: transparent;
+        display: flex;
+        flex-direction: column;
+        height: fit-content;
+        width: 80%;
+        margin-top: 5em;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .me .me_image{
+        width: 45%;
+
+    }
+
+    .me .me_description{
+        width: 90%;
+        margin: 0;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .me_description p{
+        text-align: center;
+    }
+
+    .me_description .check{
+        display: inline;
+    }
+
+}
+
 
 .whatsp-msg{
     height: fit-content;
@@ -596,6 +643,34 @@ body{
     width: 90%;
     height: fit-content;
 }
+
+@media only screen and (max-width:900px){
+    
+    .testimonio_cards{
+        display: flex;
+        flex-direction: column;
+    }
+
+    .testimonio_cards .cards{
+        width: 60%;
+        margin-bottom: 4em;
+    }
+
+    .testimonio_cards .rating_person-img{
+        height: 80px;
+        width: 80px;
+    }
+    .testimonio_cards .rating_person-img img{
+        height: 90%;
+        width: 90%;
+    }
+}
+
+
+
+
+
+/* call section -------------------------------------------------------------------------------------------------- */
 
 .call{
     height: 25vh;
