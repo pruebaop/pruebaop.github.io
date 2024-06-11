@@ -1,0 +1,413 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    <meta name="author" content="PO">
+    <meta name="description" content="Ejercicio de pagina web, espcificamente del panel de navegación o navbar">
+    <meta name="keywords" content="arquitectura, arqui, casos de estudio">
+    
+
+    <title>Arqui!</title>
+
+    <link rel="shortcut icon" href="/recursos/favicon.ico" type="image/x-icon">
+
+    <link rel="stylesheet" href="/css/style.css">
+    
+    <script defer src="/javascript/script.js"></script>
+
+  
+
+    <!-- Link para icono de barras en responsive, "fa bars" -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <!-- Fontawesome Link for Icons de card slider-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css">
+
+    <!-- Link de KIt fontawesome para newsletter footer -->
+    <script src="https://kit.fontawesome.com/c4254e24a8.js"></script>
+
+    
+</head>
+<body>
+
+    <header class="navbar">
+
+    <!-- layout No-Responsive -->
+
+        <div class="navbar_logo">
+            <img src="/recursos/logo.png" alt="Not found">
+        </div>
+
+        <nav class="navbar_links">
+            <a href="/caso.html" class="links_caso">Casos</a>
+            <a href="/curso.html" class="links_curso">Cursos</a>
+            <a href="/index.html" class="links_inicio">Inicio</a>
+            <a href="/producto.html" class="links_producto">Productos</a>
+            <a href="/sobre.html" class="links_sobre">About us</a>
+        </nav>
+
+        <div class="navbar_contact-button">
+            <a href="#">Contactanos</a>
+    
+    
+        </div>
+        
+
+    <!-- layout Responsive -->
+
+        <div class="r_navbar_toggle-button">
+            <i class="fa-solid fa-bars"></i>
+        </div>
+
+        <div class="r_navbar_dropdown-menu">
+            <a href="/caso.html" class="r_links_caso">Casos</a>
+            <a href="/curso.html" class="r_links_curso">Cursos</a>
+            <a href="/index.html" class="r_links_inicio">Inicio</a>
+            <a href="/producto.html" class="r_links_producto">Productos</a>
+            <a href="/sobre.html" class="r_links_sobre">About us</a>
+            <div class="r_navbar_contact-button">
+                <a href="/sobre.html">Contactanos</a>
+            </div>
+        </div>
+
+
+    </header>
+
+<!-- script navbar responsive toggle button -->
+
+    <script>
+        const toggleBtn = document.querySelector('.r_navbar_toggle-button')
+        const toggleBtnIcon = document.querySelector('.r_navbar_toggle-button i')
+        const dropDownMenu = document.querySelector('.r_navbar_dropdown-menu')
+
+        toggleBtn.onclick = function () {
+            dropDownMenu.classList.toggle('open')
+            const isOpen = dropDownMenu.classList.contains('open')
+
+            toggleBtnIcon.classList = isOpen 
+                ? 'fa-solid fa-xmark'
+                : 'fa-solid fa-bars'
+        }
+
+    </script>
+
+<!-- script navbar responsive toggle button -->
+
+
+    <main class="main">
+
+        <section class="main_hero">
+
+            <div class="hero_container">
+                <div class="hero_c_info">
+                    <h1 class="hero_titulo">
+                        Bienvenid@ a Arqui!
+                        </h1>
+                   
+                    <p class="hero_subtitulo">
+                        Conoce los referentes arquitectónicos más famosos, y aprende más sobre el diseño arquitectónico
+                    </p>
+                </div>
+            </div>    
+        </section>
+
+        <section class="main_section1">
+            <h2 class="section1_title">
+                Casos de estudio
+            </h2>
+            <hr class="tittle_line">
+            <div class="section1_container">
+                
+                <div class="item1">
+                    <h2>
+                        Casa Farnsworth
+                    </h2>
+                    <p>
+                        La casa farnsworth fue construida en 1958 por el arquitecto Mies Van der Rohe La casa farnsworth fue construida en 1958 por el arquitecto Mies Van der Rohe La casa farnsworth fue construida en 1958 por el arquitecto Mies Van der Rohe La casa farnsworth fue construida en 1958 por el arquitecto Mies Van der Rohe
+                    </p>
+                    <div class="item1_button">
+                        <a href="/caso.html">Conoce más +</a>
+                    </div>
+                </div>
+                <div class="item2">
+                    <img src="" alt="Not found">
+                </div>
+            </div>
+        </section>
+
+        <section class="main_section2">
+            
+            <h2 class="section2_title">
+                Productos
+            </h2>
+            <hr class="tittle_line">
+            <div class="section2_container">
+                
+                <div class="s2_container_slider wrapper">
+                    <i id="left" class="fa-solid fa-angle-left"></i>
+                    <div class="container_items carousel">
+                        
+                        <div class="items_item1 items_cards card">
+                            <p class="items_precio">Gratis</p>
+                            <hr class="items_line">
+                            <div class="cards_button">
+                                <a href="#" class="items_ver">Ver más →</a>
+                            </div>
+                            <div class="items_icono">
+                                <img src="/recursos/revit_icono.png" alt="Not found" draggable="false">
+                            </div>
+                            <p class="items_software">1 Revit</p>
+                            <h3 class="items_titulo">Familias Paramétricas</h3>
+                            <p class="items_descripcion">Descubre nuestras familias parametricas para Revit, no busques más, aqui tenemos lo que necesitas</p>
+                        </div>
+                        <div class="items_item2 items_cards card">
+                            <p class="items_precio">Gratis</p>
+                            <hr class="items_line">
+                            <div class="cards_button">
+                                <a href="#" class="items_ver">Ver más →</a>
+                            </div>
+                            <div class="item2_icono items_icono">
+                                <img src="/recursos/autocad_icono.jpg" alt="Not found" draggable="false">
+                            </div>
+                            <p class="items_software">2 Autocad</p>
+                            <h3 class="items_titulo">Mobiliario y grupos</h3>
+                            <p class="items_descripcion">Descubre nuestras familias parametricas para Revit, no busques más, aqui tenemos lo que necesitas</p>
+                        </div>
+                        <div class="items_item3 items_cards card">
+                            <p class="items_precio">Gratis</p>
+                            <hr class="items_line">
+                            <div class="cards_button">
+                                <a href="#" class="items_ver">Ver más →</a>
+                            </div>
+                            <div class="item2_icono items_icono">
+                                <img src="/recursos/archicad_icono.jpg" alt="Not found" draggable="false">
+                            </div>
+                            <p class="items_software">3 Archicad</p>
+                            <h3 class="items_titulo">Recursos</h3>
+                            <p class="items_descripcion">Descubre nuestras familias parametricas para Revit, no busques más, aqui tenemos lo que necesitas</p>
+                        </div>
+                        <div class="items_item4 items_cards card">
+                            <p class="items_precio">Gratis</p>
+                            <hr class="items_line">
+                            <div class="cards_button">
+                                <a href="#" class="items_ver">Ver más →</a>
+                            </div>
+                            <div class="item2_icono items_icono">
+                                <img src="/recursos/ilustrator_icono.png" alt="Not found" draggable="false">
+                            </div>
+                            <p class="items_software">4 Ilustrator</p>
+                            <h3 class="items_titulo">Familias Paramétricas</h3>
+                            <p class="items_descripcion">Descubre nuestras familias parametricas para Revit, no busques más, aqui tenemos lo que necesitas</p>
+                        </div>
+                        <div class="items_item5 items_cards card">
+                            <p class="items_precio">Gratis</p>
+                            <hr class="items_line">
+                            <div class="cards_button">
+                                <a href="#" class="items_ver">Ver más →</a>
+                            </div>
+                            <div class="item2_icono items_icono">
+                                <img src="/recursos/photoshop_icono.png" alt="Not found" draggable="false">
+                            </div>
+                            <p class="items_software">5 Photoshop</p>
+                            <h3 class="items_titulo">Familias Paramétricas</h3>
+                            <p class="items_descripcion">Descubre nuestras familias parametricas para Revit, no busques más, aqui tenemos lo que necesitas</p>
+                        </div>
+                        <div class="items_item6 items_cards card">
+                            <p class="items_precio">Gratis</p>
+                            <hr class="items_line">
+                            <div class="cards_button">
+                                <a href="#" class="items_ver">Ver más →</a>
+                            </div>
+                            <div class="item2_icono items_icono">
+                                <img src="/recursos/sketchup_icono.jpg" alt="Not found" draggable="false">
+                            </div>
+                            <p class="items_software">6 Sketchup</p>
+                            <h3 class="items_titulo">Familias Paramétricas</h3>
+                            <p class="items_descripcion">Descubre nuestras familias parametricas para Revit, no busques más, aqui tenemos lo que necesitas</p>
+                        </div>
+                    </div>
+                    <i id="right" class="fa-solid fa-angle-right"></i>
+                </div>
+                
+            </div>
+        </section>
+
+        <section class="main_seciton3">
+
+            <h2 class="section3_title">
+                Cursos
+            </h2>
+            <hr class="tittle_line">
+            <div class="section3_container">
+
+                <div class="s3_container_slider wrapper wrapper_curso">
+                    <i id="left" class="fa-solid fa-angle-left"></i>
+                    <div class="container_items carousel carousel_curso">
+                        
+                        <div class="card card_curso">
+                            <div class="card_img">
+                                <img src="/recursos/autocad.png" alt="Not found">
+                            </div>
+                            <h3 class="card_course-title">Autocad 2023 - Fundamentos</h3>
+                            <p class="card_description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Optio aut eligendi eos illum? Tempora explicabo porro, distinctio amet animi sit illum aspernatur saepe sint ducimus, illo itaque provident magnam fugit.</p>
+                            <span class="card_price">Gratis</span>
+                            <span class="card_time">1hr 40mins</span>
+                            <div class="card_button">
+                                <a href="#">Ver el curso</a>
+                            </div>
+                        </div>
+                        <div class="card card_curso">
+                            <div class="card_img">
+                                <img src="/recursos/revit_curso.jpg" alt="Not found">
+                            </div>
+                            <h3 class="card_course-title">Revit 2023 - Completo</h3>
+                            <p class="card_description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Optio aut eligendi eos illum? Tempora explicabo porro, distinctio amet animi sit illum aspernatur saepe sint ducimus, illo itaque provident magnam fugit.</p>
+                            <span class="card_price">+$10</span>
+                            <span class="card_time">1hr 40mins</span>
+                            <div class="card_button">
+                                <a href="curso_revit.html">Ver el curso</a>
+                            </div>
+                        </div>
+                        <div class="card card_curso">
+                            <div class="card_img">
+                                <img src="/recursos/sketchup_curso.png" alt="Not found">
+                            </div>
+                            <h3 class="card_course-title">ArchiCad 2023 - Avanzado</h3>
+                            <p class="card_description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Optio aut eligendi eos illum? Tempora explicabo porro, distinctio amet animi sit illum aspernatur saepe sint ducimus, illo itaque provident magnam fugit.</p>
+                            <span class="card_price">+$15</span>
+                            <span class="card_time">+20 videos (+2horas)</span>
+                            <div class="card_button">
+                                <a href="#">Ver el curso</a>
+                            </div>
+                        </div>
+                        <div class="card card_curso">
+                            <div class="card_img">
+                                <img src="/recursos/autocad.png" alt="Not found">
+                            </div>
+                            <h3 class="card_course-title">Sketchup 2023 - </h3>
+                            <p class="card_description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Optio aut eligendi eos illum? Tempora explicabo porro, distinctio amet animi sit illum aspernatur saepe sint ducimus, illo itaque provident magnam fugit.</p>
+                            <span class="card_price">Gratis</span>
+                            <span class="card_time">1hr 40mins</span>
+                            <div class="card_button">
+                                <a href="#">Ver el curso</a>
+                            </div>
+                        </div>
+                        <div class="card card_curso">
+                            <div class="card_img">
+                                <img src="/recursos/autocad.png" alt="Not found">
+                            </div>
+                            <h3 class="card_course-title">Sketchup 2023 - </h3>
+                            <p class="card_description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Optio aut eligendi eos illum? Tempora explicabo porro, distinctio amet animi sit illum aspernatur saepe sint ducimus, illo itaque provident magnam fugit.</p>
+                            <span class="card_price">Gratis</span>
+                            <span class="card_time">1hr 40mins</span>
+                            <div class="card_button">
+                                <a href="#">Ver el curso</a>
+                            </div>
+                        </div>
+                        <div class="card card_curso">
+                            <div class="card_img">
+                                <img src="/recursos/autocad.png" alt="Not found">
+                            </div>
+                            <h3 class="card_course-title">Sketchup 2023 - </h3>
+                            <p class="card_description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Optio aut eligendi eos illum? Tempora explicabo porro, distinctio amet animi sit illum aspernatur saepe sint ducimus, illo itaque provident magnam fugit.</p>
+                            <span class="card_price">Gratis</span>
+                            <span class="card_time">1hr 40mins</span>
+                            <div class="card_button">
+                                <a href="#">Ver el curso</a>
+                            </div>
+                        </div>
+                        <div class="card card_curso">
+                            <div class="card_img">
+                                <img src="/recursos/autocad.png" alt="Not found">
+                            </div>
+                            <h3 class="card_course-title">Sketchup 2023 - </h3>
+                            <p class="card_description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Optio aut eligendi eos illum? Tempora explicabo porro, distinctio amet animi sit illum aspernatur saepe sint ducimus, illo itaque provident magnam fugit.</p>
+                            <span class="card_price">Gratis</span>
+                            <span class="card_time">1hr 40mins</span>
+                            <div class="card_button">
+                                <a href="#">Ver el curso</a>
+                            </div>
+                        </div>
+                        <div class="card card_curso">
+                            <div class="card_img">
+                                <img src="/recursos/autocad.png" alt="Not found">
+                            </div>
+                            <h3 class="card_course-title">Sketchup 2023 - </h3>
+                            <p class="card_description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Optio aut eligendi eos illum? Tempora explicabo porro, distinctio amet animi sit illum aspernatur saepe sint ducimus, illo itaque provident magnam fugit.</p>
+                            <span class="card_price">Gratis</span>
+                            <span class="card_time">1hr 40mins</span>
+                            <div class="card_button">
+                                <a href="#">Ver el curso</a>
+                            </div>
+                        </div>
+                        <div class="card card_curso">
+                            <div class="card_img">
+                                <img src="/recursos/autocad.png" alt="Not found">
+                            </div>
+                            <h3 class="card_course-title">Sketchup 2023 - </h3>
+                            <p class="card_description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Optio aut eligendi eos illum? Tempora explicabo porro, distinctio amet animi sit illum aspernatur saepe sint ducimus, illo itaque provident magnam fugit.</p>
+                            <span class="card_price">Gratis</span>
+                            <span class="card_time">1hr 40mins</span>
+                            <div class="card_button">
+                                <a href="#">Ver el curso</a>
+                            </div>
+                        </div>
+                    </div>
+                    <i id="right" class="fa-solid fa-angle-right"></i>
+                </div>     
+            </div>
+
+        </section>
+
+    </main>
+    
+    <footer class="footer">
+        <div class="row">
+            <div class="col col1">
+                <img src="/recursos/logo blanco.png" alt="" class="logo">
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quidem, tempore iusto? Dolorum minus vero aliquid expedita beatae dolor necessitatibus dolorem possimus nisi nulla, odit deleniti placeat enim quis iste? Voluptates!</p>
+            </div>
+            <div class="col col2">
+                <h3>Datos <div class="underline"><span></span></div></h3>
+                <p>Loja, Ecuador</p>
+                <p>Oficina de Arquitectura</p>
+                <p class="email-id">arqui.loja@gmail.com</p>
+                <h4>Contacto +593 95 840 5123</h4>
+            </div>
+            <div class="col col3">
+                <h3>Links <div class="underline"><span></span></div></h3>
+                <ul class="col3_links">
+                    <li><a href="index.html">Inicio</a></li>
+                    <li><a href="caso.html">Casos de estudio</a></li>
+                    <li><a href="curso.html">Cursos</a></li>
+                    <li><a href="producto.html">Productos</a></li>
+                    <li><a href="sobre.html">Sobre nosotros</a></li>
+                </ul>
+            </div>
+                
+            <div class="col col4">
+                <h3>Newsletter <div class="underline"><span></span></div></h3>
+                <form>
+                    <i class="far fa-envelope"></i>
+                    <input type="email" placeholder="Enter your email" required>
+                    <button type="submit"><i class="fas fa-arrow-right"></i></button>
+                </form>
+                <div class="social-icons">
+                    <i class="fab fa-facebook-f"></i>
+                    <i class="fab fa-twitter"></i>
+                    <i class="fab fa-whatsapp"></i>
+                    <i class="fab fa-instagram"></i>
+                </div>
+            </div>
+        </div>
+        <hr>
+        <p class="copyright"> Arqui! © 2024 - All Rights Reserved</p>
+    </footer>
+
+</body>
+    
+</html>

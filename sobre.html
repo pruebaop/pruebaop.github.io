@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    <meta name="author" content="PO">
+    <meta name="description" content="Ejercicio de pagina web, espcificamente del panel de navegación o navbar">
+    <meta name="keywords" content="arquitectura, arqui, casos de estudio">
+    
+
+    <title>Arqui!</title>
+
+    <link rel="shortcut icon" href="/recursos/favicon.ico" type="image/x-icon">
+
+    <link rel="stylesheet" href="/css/style_about.css">
+    
+    <script defer src="/javascript/script.js"></script>
+
+  
+
+    <!-- Link para icono de barras en responsive, "fa bars" -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <!-- Fontawesome Link for Icons de card slider-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css">
+
+    <!-- Link de KIt fontawesome para newsletter footer -->
+    <script src="https://kit.fontawesome.com/c4254e24a8.js"></script>
+
+    
+</head>
+<body>
+
+    <header class="navbar">
+
+    <!-- layout No-Responsive -->
+
+        <div class="navbar_logo">
+            <img src="/recursos/logo.png" alt="Not found">
+        </div>
+
+        <nav class="navbar_links">
+            <a href="/caso.html" class="links_caso">Casos</a>
+            <a href="/curso.html" class="links_curso">Cursos</a>
+            <a href="/index.html" class="links_inicio">Inicio</a>
+            <a href="/producto.html" class="links_producto">Productos</a>
+            <a href="/sobre.html" class="links_sobre">About us</a>
+        </nav>
+
+        <div class="navbar_contact-button">
+            <a href="#">Contactanos</a>
+    
+    
+        </div>
+        
+
+    <!-- layout Responsive -->
+
+        <div class="r_navbar_toggle-button">
+            <i class="fa-solid fa-bars"></i>
+        </div>
+
+        <div class="r_navbar_dropdown-menu">
+            <a href="/caso.html" class="r_links_caso">Casos</a>
+            <a href="/curso.html" class="r_links_curso">Cursos</a>
+            <a href="/index.html" class="r_links_inicio">Inicio</a>
+            <a href="/producto.html" class="r_links_producto">Productos</a>
+            <a href="/sobre.html" class="r_links_sobre">About us</a>
+            <div class="r_navbar_contact-button">
+                <a href="/sobre.html">Contactanos</a>
+            </div>
+        </div>
+
+
+    </header>
+
+<!-- script navbar responsive toggle button -->
+
+    <script>
+        const toggleBtn = document.querySelector('.r_navbar_toggle-button')
+        const toggleBtnIcon = document.querySelector('.r_navbar_toggle-button i')
+        const dropDownMenu = document.querySelector('.r_navbar_dropdown-menu')
+
+        toggleBtn.onclick = function () {
+            dropDownMenu.classList.toggle('open')
+            const isOpen = dropDownMenu.classList.contains('open')
+
+            toggleBtnIcon.classList = isOpen 
+                ? 'fa-solid fa-xmark'
+                : 'fa-solid fa-bars'
+        }
+
+    </script>
+
+<!-- script navbar responsive toggle button -->
+
+
+    <main class="main">
+
+        <div class="phrase">
+            <div>
+                <p>La Arquitectura es un mundo por descubrir,</p>
+                <p>Veamos lo que encontramos!</p>
+            </div>  
+        </div>
+        <div class="me">
+            <div class="me_image">
+                <img src="/recursos/about_img.png" alt="">
+            </div>
+            <div class="me_description">
+                <p class="check">✓</p> <p>Hola! Somos una Oficina de Arquitectura especializada en educación</p><p class="me_joke"> (Nah, en realidad soy solo yo :'v)</p><br><br><br>
+                <p class="check">✓</p> <p>Y al igual que tú creemos que la Arquitectura es un mundo fascinante!</p>
+            </div>
+        </div>
+        <div class="whatsp-msg">
+            <div class="container">
+                <div class="msg1">
+                    <p>Ok, y?</p>
+                </div>
+                <div class="msg2">
+                    <p>A veces el aprendizaje suele ser difícil, lento y aburrido</p>
+                </div>
+                <div class="msg3">
+                    <p>Te ofrezco una nueva forma de aprender!</p>
+                </div>
+            </div>
+        </div>
+        <div class="phrase2">
+            <div>
+                <p>Cursos interactivos, casos de estudio</p>
+                <p>entre otros recursos para que tu aprendizaje sea más agradable.</p>
+            </div>   
+        </div>
+        <div class="testimonio">
+            <div class="testimonio_title">
+                <p>No confías aún?</p>
+                <p class="subtitle">Mira los testimonios de nuestros estudiantes</p>
+            </div>
+            <div class="testimonio_cards">
+                <div class="cards card1">
+                    <div class="card_phrase">
+                        <p>"Buen contenido, me ha solucionado la vida"</p>
+                    </div>
+                    <div class="card_joke">
+                        <p>(Este es mi hermano)</p>
+                    </div>
+                    <div class="card_rating">
+                        <div class="rating_person-img">
+                            <img src="/recursos/about_img.png" alt="">
+                        </div>
+                        <div class="rating_rating-img">
+                            <img src="/recursos/5 estrellas.png" alt="">
+                        </div>
+                    </div>
+                </div>
+                <div class="cards card1">
+                    <div class="card_phrase">
+                        <p>"Es un robo que los precios sean tan bajos"</p>
+                    </div>
+                    <div class="card_joke">
+                        <p>(Yo mismo :v)</p>
+                    </div>
+                    <div class="card_rating">
+                        <div class="rating_person-img">
+                            <img src="/recursos/about_img.png" alt="">
+                        </div>
+                        <div class="rating_rating-img">
+                            <img src="/recursos/5 estrellas.png" alt="">
+                        </div>
+                    </div>
+                </div>
+                <div class="cards card1">
+                    <div class="card_phrase">
+                        <p>"Ok"</p>
+                    </div>
+                    <div class="card_joke">
+                        <p>(Mi Apá)</p>
+                    </div>
+                    <div class="card_rating">
+                        <div class="rating_person-img">
+                            <img src="/recursos/about_img.png" alt="">
+                        </div>
+                        <div class="rating_rating-img">
+                            <img src="recursos/4 estrellas.png" alt="">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="call">
+            <p>Empieza a aprender!</p>
+            <a href="curso.html" class="button">Ver cursos</a>
+        </div>
+    </main>
+    
+    <footer class="footer">
+        <div class="row">
+            <div class="col col1">
+                <img src="/recursos/logo blanco.png" alt="" class="logo">
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quidem, tempore iusto? Dolorum minus vero aliquid expedita beatae dolor necessitatibus dolorem possimus nisi nulla, odit deleniti placeat enim quis iste? Voluptates!</p>
+            </div>
+            <div class="col col2">
+                <h3>Datos <div class="underline"><span></span></div></h3>
+                <p>Loja, Ecuador</p>
+                <p>Oficina de Arquitectura</p>
+                <p class="email-id">arqui.loja@gmail.com</p>
+                <h4>Contacto +593 95 840 5123</h4>
+            </div>
+            <div class="col col3">
+                <h3>Links <div class="underline"><span></span></div></h3>
+                <ul class="col3_links">
+                    <li><a href="index.html">Inicio</a></li>
+                    <li><a href="caso.html">Casos de estudio</a></li>
+                    <li><a href="curso.html">Cursos</a></li>
+                    <li><a href="producto.html">Productos</a></li>
+                    <li><a href="sobre.html">Sobre nosotros</a></li>
+                </ul>
+            </div>
+                
+            <div class="col col4">
+                <h3>Newsletter <div class="underline"><span></span></div></h3>
+                <form>
+                    <i class="far fa-envelope"></i>
+                    <input type="email" placeholder="Enter your email" required>
+                    <button type="submit"><i class="fas fa-arrow-right"></i></button>
+                </form>
+                <div class="social-icons">
+                    <i class="fab fa-facebook-f"></i>
+                    <i class="fab fa-twitter"></i>
+                    <i class="fab fa-whatsapp"></i>
+                    <i class="fab fa-instagram"></i>
+                </div>
+            </div>
+        </div>
+        <hr>
+        <p class="copyright"> Arqui! © 2024 - All Rights Reserved</p>
+    </footer>
+
+</body>
+    
+</html>
